@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background:#c2c2c2;
+  --container:#b9428d;
+  --mainBlue:#be436b;
+  --secondColor: #c04548;
+  --thirdColor: #c36948;
+  --fourColor: #c5914a;
+}
+
+.container {
+    
+}
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.chosen {
+  cursor: pointer;
+  background-color: green
+}
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+  text-decoration: line-through;
+}
+.fa-times {
+  color: red
+}
+
+.fa-check {
+  color: green;
+}

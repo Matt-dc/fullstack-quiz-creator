@@ -55,6 +55,7 @@ app.use(cors());
 
 const QuizSchema = new mongoose.Schema({
     quizName: {type: String },
+    quizImage: String,
     creator: {type: String },
     topic: {type: String},
     difficulty: String,
@@ -64,6 +65,8 @@ const QuizSchema = new mongoose.Schema({
 
 const Quiz = mongoose.model('Quiz', QuizSchema)
 
+
+
 app.get('/', async (req, res) => {
     const quizzes = await Quiz.find({})
 
@@ -72,10 +75,12 @@ app.get('/', async (req, res) => {
 })
 
 
+
 app.get('/search/:topic', async (req, res) => {
     const quizzes = await Quiz.find({topic: req.params.topic})
         res.send(quizzes)
 })
+
 
 
 
@@ -88,23 +93,47 @@ app.get('/:id', (req, res) => {
 })
 
 
-app.put('/:id', upload.array('images'), (req, res) => {
+
+app.put('/edit/:id', upload.array('images'), (req, res) => {
 
     const parsed = JSON.parse(req.body.quiz)
 
     req.body.quiz = parsed
 
     const updatedQuiz = req.body;
-    const id = req.params.id
+    const id = req.params.id;
+    const files = req.files
 
-    req.body.quiz.map(q => {
-        for( file in req.files) {
-            if (q.imageName === req.files[file].originalname){
-                 q.imageName = req.files[file].path
+    if (files.length > 0) {   
+        
+        if(req.body.quizImage === req.files[0].originalname) {
+            req.body.quizImage = req.files[0].path
+        } 
+        
+        req.body.quiz.map(q => {
+            for( file in req.files) {
+                if (q.imageName === req.files[file].originalname){
+                    q.imageName = req.files[file].path
+                }
             }
+        })
+
+    } else if (req.files && req.files.length === 1) {
+
+        if(req.body.quizName == req.files[0].originalname) {
+            req.body.quizImage = req.files[0].path
+        } 
+        else {
+
+            req.body.quiz.map(q => {
+                for( file in req.files) {
+                    if (q.imageName === req.files[file].originalname){
+                        q.imageName = req.files[file].path
+                    }
+                }
+            })
         }
-     })
-     
+    }
 
     Quiz.findOneAndUpdate({ _id: id }, updatedQuiz, {new: true}, (err, doc) => {
         if(err) {
@@ -113,7 +142,9 @@ app.put('/:id', upload.array('images'), (req, res) => {
             res.send(doc)
         }
         })
+        console.log(req.body.quizImage)
     })
+
 
 
 app.delete('/delete/:id', (req, res) => {
@@ -131,9 +162,16 @@ app.delete('/delete/:id', (req, res) => {
 
 app.post('/create', upload.array('images', 20), (req, res) => {
     
-       const parsed = JSON.parse(req.body.quiz) 
+    const parsed = JSON.parse(req.body.quiz) 
 
-       req.body.quiz = parsed
+    req.body.quiz = parsed
+
+    // check if user has uploaded a quiz image, if not, keep the default
+    const arr = req.body.quizImage.split("-")
+
+    if(arr[0] !== "topic") {
+        req.body.quizImage = req.files[0].path
+    } 
 
     req.body.quiz.map(q => {
        for( file in req.files) {

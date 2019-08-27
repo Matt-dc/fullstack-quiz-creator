@@ -1,7 +1,8 @@
 # Full-stack Quiz Creator
 
 ## Overview
-This is a full-stack app that allows users to create their own quizzes and then run them.
+This is a full-stack MERN app that allows users to create their own quizzes and then run them. Styling is done using Materialize.css.
+
 <p align="center">
    <img src="siteimages/choosequiz.png" width="400px" />
 </p>
@@ -16,7 +17,7 @@ Selecting options while clicking through various screens seemed to be a model wh
 </p>
 
 ### Edit Quiz
-
+Quizzes are fully editable including images, which are sent through to the back end and handled using Multer.
 
 <p align="center">
    <img src="siteimages/editquiz.png" width="400px" />
@@ -27,7 +28,7 @@ The app is build upon the MERN stack,
 
 
 ### Future Development
-Tests would be an initial improvement to the app. Aside from this, I would like to implement a login system and some kind of scoreboard functionality as well as stats that display average user results on quizzes,
+An initial improvement to the app would be unit and component Tests. Aside from this, implementation of a login system and some kind of user scoreboard functionality as well as user statistics that display average user results on quizzes and records quiz history would be natural next steps.
 
 
 &nbsp;

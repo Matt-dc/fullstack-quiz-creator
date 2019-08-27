@@ -15,8 +15,6 @@ Selecting options while clicking through various screens seemed to be a model wh
    <img src="siteimages/selectanswer.png" width="400px" />
 </p>
 
-&nbsp;
-
 ### Edit Quiz
 
 
@@ -34,7 +32,6 @@ Selecting options while clicking through various screens seemed to be a model wh
 
 ## Third Party
 The app is build upon the MERN stack, 
-
 
 
 

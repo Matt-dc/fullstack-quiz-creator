@@ -2,18 +2,25 @@
 
 ## Overview
 This is a full-stack app that allows users to create their own quizzes and then run them.
+<p align="center">
+   <img src="siteimages/choosequiz.png" width="500px" />
+</p>
+
+&nbsp;
 
 
-Third Party
+## Third Party
 Mongoose, 
 
 Why build it?
 Selecting options while clicking through various screens seemed to be a model which is quite applicable to a range of app ideas I had, and thus I decided to begin with something that seemed manageable.
 
 
-Installation 
+## Installation 
+```
 npm install
-npm run bla
+npm run bla 
+```
 
 
 Future Development
@@ -23,9 +30,7 @@ Tests would be an initial improvement to the app. Aside from this, I would like 
    <img src="siteimages/selectanswer.png" width="500px" />
 </p>
 
-<p align="center">
-   <img src="siteimages/choosequiz.png.png" width="500px" />
-</p>
+
 
 <p align="center">
    <img src="siteimages/choosetopics.png" width="500px" />

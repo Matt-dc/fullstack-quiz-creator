@@ -12,6 +12,7 @@ const db = mongoose.connection;
 db.once('open', () => console.log('successful connection'));
 db.on('error', console.error.bind(console, 'connection error'));
 
+const PORT = 5000
 
 const storage = multer.diskStorage({
     destination: function(req, file, callback) {
@@ -38,7 +39,7 @@ const upload = multer({ storage: storage,
     fileFilter: fileFilter
 })
 
-//body parser
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));  
 
@@ -65,6 +66,9 @@ const QuizSchema = new mongoose.Schema({
 
 const Quiz = mongoose.model('Quiz', QuizSchema)
 
+// ##########################
+// ######## ROUTES #########
+// #########################
 
 
 app.get('/', async (req, res) => {
@@ -74,15 +78,10 @@ app.get('/', async (req, res) => {
 
 })
 
-
-
 app.get('/search/:topic', async (req, res) => {
     const quizzes = await Quiz.find({topic: req.params.topic})
         res.send(quizzes)
 })
-
-
-
 
 app.get('/:id', (req, res) => {
     const id = req.params.id;
@@ -91,8 +90,6 @@ app.get('/:id', (req, res) => {
         res.send(quiz)
     })
 })
-
-
 
 app.put('/edit/:id', upload.array('images'), (req, res) => {
 
@@ -145,8 +142,6 @@ app.put('/edit/:id', upload.array('images'), (req, res) => {
         console.log(req.body.quizImage)
     })
 
-
-
 app.delete('/delete/:id', (req, res) => {
     const id = req.params.id;
     Quiz.findByIdAndRemove(id, (err, user) => {
@@ -158,7 +153,6 @@ app.delete('/delete/:id', (req, res) => {
     })
 })
   
-
 
 app.post('/create', upload.array('images', 20), (req, res) => {
     
@@ -190,9 +184,6 @@ app.post('/create', upload.array('images', 20), (req, res) => {
         res.send(response)
     })
 })
-
-
-const PORT = 5000
 
 app.listen(PORT, () => console.log('running on 5000'))
 

@@ -17,7 +17,7 @@ The general structure of the app seemed to be one which is quite applicable to a
 </p>
 
 ### Edit Quiz
-Quizzes are fully editable, which includes both quiz and question images, and which are sent through to the back end and handled using a href="https://www.npmjs.com/package/multer">Multer.</a>
+Quizzes are fully editable, which includes both quiz and question images, and which are sent through to the back end and handled using <a href="https://www.npmjs.com/package/multer">Multer.</a>
 
 <p align="center">
    <img src="siteimages/editquiz.png" width="400px" />

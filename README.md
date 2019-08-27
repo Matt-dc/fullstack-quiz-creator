@@ -1,16 +1,39 @@
-# React Journalling App - Medium Clone
+# Full-stack Quiz Creator
 
 ## Overview
-This is a clone of the popular blogging network Medium. It implements the functionality to:
- - Create and update posts
- - follow users
- - receive personalized content based on topic preferences
-- edit reading history
-- update and reset login information
-- comment and reply to comments
-- like both posts and comments
+This is a full-stack app that allows users to create their own quizzes and then run them.
 
-![email signup]: (https://photos.google.com/photo/AF1QipMCGyFXqcJmWEh3Z3cv5xf0sDT7OjO3nn2XA-8_)
+
+Third Party
+Mongoose, 
+
+Why build it?
+Selecting options while clicking through various screens seemed to be a model which is quite applicable to a range of app ideas I had, and thus I decided to begin with something that seemed manageable.
+
+
+Installation 
+npm install
+npm run bla
+
+
+Future Development
+Tests would be an initial improvement to the app. Aside from this, I would like to implement a login system and some kind of scoreboard functionality as well as stats that display average user results on quizzes,
+
+<p align="center">
+   <img src="siteimages/selectanswer.png" width="500px" />
+</p>
+
+<p align="center">
+   <img src="siteimages/choosequiz.png.png" width="500px" />
+</p>
+
+<p align="center">
+   <img src="siteimages/choosetopics.png" width="500px" />
+</p>
+
+<p align="center">
+   <img src="siteimages/editquiz.png" width="500px" />
+</p>
 
 
 &nbsp;

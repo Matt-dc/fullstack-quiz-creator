@@ -17,7 +17,7 @@ Selecting options while clicking through various screens seemed to be a model wh
 </p>
 
 ### Edit Quiz
-Quizzes are fully editable including images, which are sent through to the back end and handled using Multer.
+Quizzes are fully editable, which includes both quiz and question images, and which are sent through to the back end and handled using Multer.
 
 <p align="center">
    <img src="siteimages/editquiz.png" width="400px" />

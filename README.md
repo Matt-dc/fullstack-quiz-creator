@@ -3,7 +3,7 @@
 ## Overview
 This is a full-stack app that allows users to create their own quizzes and then run them.
 <p align="center">
-   <img src="siteimages/choosequiz.png" width="500px" />
+   <img src="siteimages/choosequiz.png" width="400px" />
 </p>
 
 &nbsp;
@@ -12,7 +12,7 @@ This is a full-stack app that allows users to create their own quizzes and then 
 Selecting options while clicking through various screens seemed to be a model which is quite applicable to a range of app ideas I had, and thus I decided to begin with something that seemed manageable.
 
 <p align="center">
-   <img src="siteimages/selectanswer.png" width="500px" />
+   <img src="siteimages/selectanswer.png" width="400px" />
 </p>
 
 &nbsp;
@@ -21,15 +21,14 @@ Selecting options while clicking through various screens seemed to be a model wh
 
 
 <p align="center">
-   <img src="siteimages/editquiz.png" width="500px" />
+   <img src="siteimages/editquiz.png" width="400px" />
 </p>
-
 
 
 ### Choose topics
 
 <p align="center">
-   <img src="siteimages/choosetopics.png" width="500px" />
+   <img src="siteimages/choosetopics.png" width="400px" />
 </p>
 
 

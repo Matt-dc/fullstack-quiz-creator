@@ -22,17 +22,8 @@ Selecting options while clicking through various screens seemed to be a model wh
    <img src="siteimages/editquiz.png" width="400px" />
 </p>
 
-
-### Choose topics
-
-<p align="center">
-   <img src="siteimages/choosetopics.png" width="400px" />
-</p>
-
-
 ## Third Party
 The app is build upon the MERN stack, 
-
 
 
 ### Future Development

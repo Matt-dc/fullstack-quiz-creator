@@ -23,10 +23,6 @@ Quizzes are fully editable including images, which are sent through to the back 
    <img src="siteimages/editquiz.png" width="400px" />
 </p>
 
-## Third Party
-The app is build upon the MERN stack, 
-
-
 ### Future Development
 An initial improvement to the app would be unit and component Tests. Aside from this, implementation of a login system and some kind of user scoreboard functionality as well as user statistics that display average user results on quizzes and records quiz history would be natural next steps.
 
@@ -41,6 +37,7 @@ blbal link
 
 ## Installation 
 ```bash
+cd fullstack-quiz-creator
 npm install
 npm run concurrently 
 ```

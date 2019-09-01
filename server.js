@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const multer = require('multer');
 const cors = require('cors');
-
+const path = require("path")
 
 PORT = process.env.PORT || 5000
 

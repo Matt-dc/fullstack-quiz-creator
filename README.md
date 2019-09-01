@@ -32,7 +32,7 @@ An initial improvement to the app would be unit and component Tests. Aside from 
 ## Live Version
 You can see a live working version hosted on Heroku here:
 
-blbal link
+https://fullstack-quizcreator.herokuapp.com/
 
 
 ## Installation 

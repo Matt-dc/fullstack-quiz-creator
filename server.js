@@ -198,7 +198,3 @@ app.get("*", (req, res) => {
 
 
 app.listen(PORT, () => console.log('running on 5000'))
-
-mongodb://heroku_7h7cdfpb:ce2dea07nnfb16817ptmsk9js9@ds159782.mlab.com:59782/heroku_7h7cdfpb
-
-mongodb://heroku_kjqcdkzr#:<dbpassword>@ds215338.mlab.com:15338/heroku_kjqcdkzr

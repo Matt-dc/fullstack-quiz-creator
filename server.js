@@ -5,14 +5,19 @@ const bodyParser = require('body-parser')
 const multer = require('multer');
 const cors = require('cors');
 
-const url = 'mongodb://localhost/quizzes'
-mongoose.connect(url)
+
+PORT = process.env.PORT || 5000
+
+DB_URL = process.env.NODE_ENV === 'production' ? 
+    process.env.DB_URL : 
+    'mongodb://localhost/quizzes'
+
+mongoose.connect(DB_URL)
 const db = mongoose.connection;
 
 db.once('open', () => console.log('successful connection'));
 db.on('error', console.error.bind(console, 'connection error'));
 
-const PORT = 5000
 
 const storage = multer.diskStorage({
     destination: function(req, file, callback) {
@@ -190,6 +195,7 @@ app.post('/create', upload.array('images', 20), (req, res) => {
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });  
+
 
 app.listen(PORT, () => console.log('running on 5000'))
 

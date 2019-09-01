@@ -9,7 +9,8 @@
     "dev": "nodemon server.js",
     "server": "node server.js",
     "client": "npm start --prefix client",
-    "concurrently": "concurrently \"npm run dev \" \"npm run client \""
+    "concurrently": "concurrently \"npm run dev \" \"npm run client \"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Matt Cooper",
   "license": "ISC",

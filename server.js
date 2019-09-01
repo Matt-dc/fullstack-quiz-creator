@@ -52,6 +52,8 @@ app.use(function(req, res, next) {
 
 app.use('/uploads', express.static('uploads'))
 
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 app.use(cors());
 
 const QuizSchema = new mongoose.Schema({
@@ -184,6 +186,10 @@ app.post('/create', upload.array('images', 20), (req, res) => {
         res.send(response)
     })
 })
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });  
 
 app.listen(PORT, () => console.log('running on 5000'))
 
